@@ -1,4 +1,5 @@
-import { resolve } from 'path'
+import { resolve } from 'path';
+import vitePluginFaviconsInject from 'vite-plugin-favicons-inject';
 
 export default {
   root: resolve(__dirname, 'src'),
@@ -7,5 +8,8 @@ export default {
   },
   server: {
     port: 8080
-  }
+  },
+  plugins: [
+    vitePluginFaviconsInject("./src/icon.svg")
+  ]
 }
